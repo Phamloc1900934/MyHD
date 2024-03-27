@@ -232,12 +232,12 @@ Rectangle {
                 }
 
                 // Credits and copyright
-                ConfigPopupSidebarButton{
-                    id:  credits
-                    m_icon_text: "\uf005"
-                    m_description_text: "Credits"
-                    m_selection_index: 6
-                }
+                // ConfigPopupSidebarButton{
+                //     id:  credits
+                //     m_icon_text: "\uf005"
+                //     m_description_text: "Credits"
+                //     m_selection_index: 6
+                // }
 
                 // Developer stats
                 ConfigPopupSidebarButton{

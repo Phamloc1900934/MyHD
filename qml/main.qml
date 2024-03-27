@@ -40,7 +40,7 @@ ApplicationWindow {
 
     //minimumWidth: 850
     //minimumHeight: 480
-    title: qsTr("QOpenHD EVO")
+    title: qsTr("MY VIEW")
     // Transparent background is needed when the video is not rendered via (OpenGL) inside QT,
     // but rather done independently by using a pipeline that directly goes to the HW composer (e.g. mmal on pi).
     //color: "transparent" //Consti10 transparent background

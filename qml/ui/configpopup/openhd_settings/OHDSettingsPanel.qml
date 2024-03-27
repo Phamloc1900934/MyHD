@@ -36,16 +36,16 @@ Rectangle {
     TabBar {
         id: selectItemInStackLayoutBar
         width: parent.width
-        TabButton {
-            text: qsTr("LINK/QUICK")
-        }
+        // TabButton {
+        //     text: qsTr("LINK/QUICK")
+        // }
         TabButton {
             text: qsTr("AIR CAM 1")
         }
-        TabButton {
-            text: qsTr("AIR CAM 2")
-            enabled: settings.dev_qopenhd_n_cameras>1
-        }
+        // TabButton {
+        //     text: qsTr("AIR CAM 2")
+        //     enabled: settings.dev_qopenhd_n_cameras>1
+        // }
         TabButton {
             text: qsTr("AIR")
         }

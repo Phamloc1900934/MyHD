@@ -57,7 +57,7 @@ ScrollView {
                             settings.color_caution="yellow"
                             settings.color_glow="black"
                             settings.color_shape="#ff14ff00"
-                            settings.color_text="#ff05ff00"
+                            settings.color_text="#ff14ff00"
                             settings.color_warn="red"
                             settings.font_text="Quicksand"
                         }
@@ -68,8 +68,8 @@ ScrollView {
                         Layout.leftMargin: 10
                         Layout.rightMargin: 10
                         onClicked: {
-                            settings.color_shape="white"
-                            settings.color_text= "white"
+                            settings.color_shape="#ff14ff00"
+                            settings.color_text= "#ff14ff00"
                             settings.color_glow= "black"
                             settings.color_warn= "red"
                             settings.color_caution= "yellow"

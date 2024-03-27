@@ -245,16 +245,28 @@ Item {
         anchors.leftMargin: 8
         anchors.top: parent.top
         anchors.topMargin: 0
-        // If the sidebar is activated, do not show the (button/image) that opens the advanced menu
-        // since on devices with a funky ratio (e.g. extra wide, like most modern android phones)
-        // the back button of the sidebar and this button conflict
         visible: !sidebar.m_extra_is_visible
 
         MouseArea {
             id: settingsButtonMouseArea
             anchors.fill: parent
-            onClicked: {
-                open_config_popup()
+
+            // Timer to manage hover state
+            Timer {
+                id: hoverTimer
+                interval: 10000 // 10 seconds
+                repeat: false
+                onTriggered: {
+                    open_config_popup()
+                }
+            }
+
+            onEntered: {
+                hoverTimer.start();
+            }
+
+            onExited: {
+                hoverTimer.stop();
             }
         }
         Rectangle{

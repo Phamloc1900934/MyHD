@@ -104,8 +104,8 @@ Settings {
     property bool enable_imperial: false
     property bool enable_rc: false
 
-    property string color_shape: "white"
-    property string color_text: "white"
+    property string color_shape: "#ff14ff00"
+    property string color_text: "#ff14ff00"
     property string color_glow: "black"
     property string color_warn: "red"
     property string color_caution: "yellow"
@@ -115,9 +115,9 @@ Settings {
     // Note that low fps like on embedded devices also adds some latency - because of that, default to 100ms here
     property int smoothing: 33
 
-    property bool show_downlink_rssi: true
+    property bool show_downlink_rssi: false
     //Const10
-    property bool downlink_show_dbm_and_packets_per_card: true
+    property bool downlink_show_dbm_and_packets_per_card: false
     property bool downlink_dbm_per_card_show_multiple_antennas:false
     property bool downlink_show_current_bitrate: false
     property bool downlink_cards_right: false
@@ -127,25 +127,25 @@ Settings {
     // r.n one of the most important statistics about link quality
     property int downlink_packet_loss_perc_caution : 10
     property int downlink_packet_loss_perc_warn : 20
-    property bool downlink_dbm_warning: true
+    property bool downlink_dbm_warning: false
     property bool downlink_signal_quality_show: false
     property bool downlink_pollution_show: false
 
-    property bool show_uplink_rssi: true
+    property bool show_uplink_rssi: false
     property bool uplink_rssi_declutter: false
     property double uplink_rssi_warn: 0
     property double uplink_rssi_caution: 0
 
-    property bool show_rc_rssi: true
+    property bool show_rc_rssi: false
     property bool rc_rssi_declutter: false
     property double rc_rssi_warn: 0
     property double rc_rssi_caution: 0
 
-    property bool show_bitrate: true
+    property bool show_bitrate: false
     property bool bitrate_declutter: false
     property double bitrate_warn: 0
     property double bitrate_caution: 0
-    property bool camera_bitrate_widget_show_recording: true
+    property bool camera_bitrate_widget_show_recording: false
     //
     property bool qrenderstats_show: false
     property bool qrenderstats_declutter: false
@@ -153,8 +153,8 @@ Settings {
     property double qrenderstats_caution: 0
 
 
-    property bool show_air_battery: true
-    property bool air_battery_show_voltage_current: true
+    property bool show_air_battery: false
+    property bool air_battery_show_voltage_current: false
     property bool air_battery_show_single_cell: false
     property bool air_battery_use_batt_id_0_only: false
 
@@ -170,34 +170,34 @@ Settings {
     property int ground_voltage_in_percent: 0
 
 
-    property bool show_gps: true
+    property bool show_gps: false
     property bool gps_show_all: false
     property bool gps_hide_identity_using_offset: false
     property bool gps_declutter: false
     property double gps_warn: 3
     property double gps_caution: 2
 
-    property bool show_home_distance: true
+    property bool show_home_distance: false
     property double home_saved_lat: 0.0
     property double home_saved_lon: 0.0
 
-    property bool show_flight_time: true
+    property bool show_flight_time: false
 
-    property bool show_flight_mode: true
-    property bool flight_mode_show_disarmed: true
+    property bool show_flight_mode: false
+    property bool flight_mode_show_disarmed: false
 
-    property bool show_flight_distance: true
+    property bool show_flight_distance: false
 
-    property bool show_flight_mah: true
+    property bool show_flight_mah: false
 
-    property bool show_flight_mah_km: true
+    property bool show_flight_mah_km: false
 
     property bool show_imu_temp: false
     property bool imu_temp_declutter: false
     property double imu_temp_warn: 75
     property double imu_temp_caution: 65
 
-    property bool show_press_temp: true
+    property bool show_press_temp: false
     property bool press_temp_declutter: false
     property double press_temp_warn: 75
     property double press_temp_caution: 60
@@ -212,29 +212,29 @@ Settings {
     property double esc_temp_warn: 75
     property double esc_temp_caution: 60
 
-    property bool show_ground_status: true
+    property bool show_ground_status: false
     property bool ground_status_declutter: false
-    property bool ground_status_show_undervolt_icon: true
+    property bool ground_status_show_undervolt_icon: false
     property double ground_status_cpu_caution: 50
     property double ground_status_cpu_warn: 70
     property double ground_status_temp_caution: 60
     property double ground_status_temp_warn: 70
 
-    property bool show_air_status: true
+    property bool show_air_status: false
     property bool air_status_declutter: false
-    property bool air_status_show_undervolt_icon: true
+    property bool air_status_show_undervolt_icon: false
     property double air_status_cpu_caution: 50
     property double air_status_cpu_warn: 70
     property double air_status_temp_caution: 60
     property double air_status_temp_warn: 70
 
-    property bool show_message_hud: true
+    property bool show_message_hud: false
 
     property bool show_horizon: true
     property bool horizon_invert_pitch: false
     property bool horizon_invert_roll: false
     property double horizon_width: 2
-    property int horizon_ladder_spacing: 180
+    property int horizon_ladder_spacing: 65
     property int horizon_range: 50
     property int horizon_step: 10
     property bool show_horizon_ladder: true
@@ -243,7 +243,7 @@ Settings {
     property bool horizon_show_center_indicator: true
     property double horizon_clip_area_scale: 1.0
 
-    property bool heading_ladder_text: true //shared between heading and horizon
+    property bool heading_ladder_text: false //shared between heading and horizon
 
     property bool show_heading: true
     property bool show_heading_ladder: true
@@ -255,7 +255,7 @@ Settings {
     // false by default for now, since it has a big performance hit. (only noticeable on embedded devices like rpi -
     // but rpi is one of our main user(s) platforms
     property bool show_flight_path_vector: false
-    property bool fpv_dynamic: true    
+    property bool fpv_dynamic: true
     property int fpv_sensitivity: 5
     property bool fpv_invert_pitch: false
     property bool fpv_invert_roll: false //currently not used
@@ -271,7 +271,7 @@ Settings {
     property int speed_ladder_range: 100
     property int speed_ladder_minimum: 0
 
-    property bool show_speed_second: true
+    property bool show_speed_second: false
     property bool speed_second_use_groundspeed: true
     property bool speed_second_use_kmh: true
     property bool speed_second_show_unit: true
@@ -282,8 +282,8 @@ Settings {
     property int altitude_ladder_range: 100
     property bool altitude_ladder_show_unit: true
 
-    property bool show_altitude_second: true
-    property bool altitude_second_msl_rel: true
+    property bool show_altitude_second: false
+    property bool altitude_second_msl_rel: false
 
     property bool show_arrow: true
     property bool arrow_invert: false
@@ -303,15 +303,15 @@ Settings {
 
     property int map_zoom: 18
     property double map_size: 1
-    property bool show_throttle: true
+    property bool show_throttle: false
 
-    property bool show_control: true
-    property bool double_control: true
+    property bool show_control: false
+    property bool double_control: false
     property bool control_rev_pitch: false
     property bool control_rev_roll: false
     property bool control_rev_yaw: false
     property bool control_rev_throttle: false
-    property bool control_widget_use_fc_channels: true
+    property bool control_widget_use_fc_channels: false
 
     property bool show_gpio: false
     property int selected_map_provider: 0
@@ -344,7 +344,7 @@ Settings {
     property bool bank_angle_indicator_widget_show_numbers: true
     property bool bank_angle_indicator_widget_sky_pointer: false
 
-    property bool show_mission: true
+    property bool show_mission: false
 
     property bool show_record_widget: true
     property double recordTextSize: 14
@@ -389,13 +389,13 @@ Settings {
     property bool primary_video_scale_to_fit: false
 
     // HUD WB link rate control element settings
-    property bool wb_link_rate_control_widget_show: true
-    property bool wb_link_rate_control_widget_show_frequency: true
-    property bool wb_link_rate_control_widget_show_bitrate: true
-    property bool wb_link_rate_control_widget_show_fec_and_keyframe: true
-     property bool wb_link_rate_control_widget_show_throttle_warning: true
+    property bool wb_link_rate_control_widget_show: false
+    property bool wb_link_rate_control_widget_show_frequency: false
+    property bool wb_link_rate_control_widget_show_bitrate: false
+    property bool wb_link_rate_control_widget_show_fec_and_keyframe: false
+     property bool wb_link_rate_control_widget_show_throttle_warning: false
 
-    property bool wb_link_rate_control_widget_show_bitrate_detailed: true
+    property bool wb_link_rate_control_widget_show_bitrate_detailed: false
 
     // really really dirty, i want to get rid of it as soon as possible
     property bool dirty_enable_inav_hacks: false
